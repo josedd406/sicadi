@@ -1,0 +1,15 @@
+@media (max-width:320px){
+  <!—- Aquí van todos los estilos CSS -->
+}
+@media (min-width:768px){
+  <!—- Aquí van todos los estilos CSS -->
+}
+@media (orientation: landscape) {
+  <!-- Aquí van todos los estilos CSS -->
+}
+@media only screen and (min-width:320px) and (max-width:480px){
+<!—- Aquí van todos los estilos CSS -->
+}
+@media only screen and (min-device-width: 960px){
+  /* Aquí van todos los estilos CSS */
+}
