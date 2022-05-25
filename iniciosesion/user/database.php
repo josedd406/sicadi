@@ -1,5 +1,5 @@
 <?php
-  $server = 'localhost:85';
+  $server = 'localhost';
   $username = 'root';
   $password = '';
   $database = 'sicadi';
