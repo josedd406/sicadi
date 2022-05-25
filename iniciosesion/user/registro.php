@@ -39,6 +39,7 @@ if (!empty($_POST['nombre']) && !empty($_POST['telefono']) && !empty($_POST['use
 	  $message = 'Las contraseñas no coinciden';
   }
 }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
