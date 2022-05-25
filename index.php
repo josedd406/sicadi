@@ -1,6 +1,7 @@
 <?php
-session_start();
+
 require 'iniciosesion/user/database.php';
+session_start();
 
 
 
