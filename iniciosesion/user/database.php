@@ -1,7 +1,7 @@
 <?php
   $server = 'localhost:85';
   $username = 'root';
-  $password = '8988';
+  $password = '';
   $database = 'sicadi';
 
   try {
