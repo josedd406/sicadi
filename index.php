@@ -4,7 +4,7 @@ require 'iniciosesion/user/database.php';
 session_start();
 
 
-
+//Esto es una prueba
 
 if (isset($_SESSION['user_id'])) {
   $records = $conn->prepare('SELECT id, email, password, privilegios FROM users WHERE id = :id');
