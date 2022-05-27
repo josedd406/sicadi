@@ -1,7 +1,12 @@
 <?php
+<<<<<<< HEAD
 require 'iniciosesion/user/database.php';
 session_start();
+=======
+
+>>>>>>> rama2
 require 'iniciosesion/user/database.php';
+session_start();
 
 
 
