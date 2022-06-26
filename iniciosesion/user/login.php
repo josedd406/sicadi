@@ -12,6 +12,8 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
   $message = '';
 
+   //agregar comentario
+
     if($_POST['password'] == $results['password']) {
       $_SESSION['user_id'] = $results['id'];
       header('Location: /SICADI');
