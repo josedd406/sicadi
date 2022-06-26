@@ -52,6 +52,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
       <?php endif; ?>
 
       <form action="../user/login.php" method="post">
+        <center>
         <input type="text" name="email" placeholder="Indroduzca su email">
         <input type="password" name="password" placeholder="Introduzca su contraseña">
         <div class="g-recaptcha" data-sitekey="6LfGkmIgAAAAABt-NxD78L7nT1b22wAzOSrnoL0J"></div><br>
@@ -60,9 +61,10 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
           <?php endif; ?>
           <br>
         <input type="submit" value="Enviar">
+        </center>
       </form>
       
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-      
+
   </body>
 </html>
