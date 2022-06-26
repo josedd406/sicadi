@@ -55,11 +55,14 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         <center>
         <input type="text" name="email" placeholder="Indroduzca su email">
         <input type="password" name="password" placeholder="Introduzca su contraseña">
+        <br>
         <div class="g-recaptcha" data-sitekey="6LfGkmIgAAAAABt-NxD78L7nT1b22wAzOSrnoL0J"></div><br>
+
         <?php if (!empty($alert)) : ?>
-          <p><?= $alert ?></p>
+          <p> ⚠️ <?= $alert ?></p>
           <?php endif; ?>
-          <br>
+        <br>
+
         <input type="submit" value="Enviar">
         </center>
       </form>
