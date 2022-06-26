@@ -9,19 +9,28 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
   $records->bindParam(':email', $_POST['email']);
   $records->execute();
   $results = $records->fetch(PDO::FETCH_ASSOC);
+  $captcha = $_POST['g-recaptcha-response'];
 
-  $message = '';
+  $secret = '6LfGkmIgAAAAAEm6GfJLEmlhBZGvXzHc3H5t7hXz';
 
-   //agregar comentario
+  $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$captcha");
 
-    if($_POST['password'] == $results['password']) {
-      $_SESSION['user_id'] = $results['id'];
-      header('Location: /SICADI');
-    } else {
-      $message = 'Usuario o contraseña incorrectos o inexistentes';
+  $arr = json_decode($response, TRUE);
+
+    if($arr['success']){
+
+      $message = '';
+      $alert = '';
+
+      if($_POST['password'] == $results['password']) {
+        $_SESSION['user_id'] = $results['id'];
+        header('Location: /SICADI');
+      } else {
+          $message = 'Usuario o contraseña incorrectos';
+      }
+    }else {
+      $alert = '<h3>Verificar el captcha</h3>';
     }
-
-
 }
 ?>
 
@@ -45,7 +54,15 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
       <form action="../user/login.php" method="post">
         <input type="text" name="email" placeholder="Indroduzca su email">
         <input type="password" name="password" placeholder="Introduzca su contraseña">
+        <div class="g-recaptcha" data-sitekey="6LfGkmIgAAAAABt-NxD78L7nT1b22wAzOSrnoL0J"></div><br>
+        <?php if (!empty($alert)) : ?>
+          <p><?= $alert ?></p>
+          <?php endif; ?>
+          <br>
         <input type="submit" value="Enviar">
       </form>
+      
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      
   </body>
 </html>
