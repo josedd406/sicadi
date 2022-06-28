@@ -1,0 +1,13 @@
+<?php echo $rsg['']; ?>
+
+<input type="radio" name="" value="">
+
+
+			  <form>
+				<input id="submit" name="submit" type="submit" value="Enviar">
+				<input id="submit" name="submit" type="submit" value="Enviar">
+			  </form>
+
+
+
+XboxOne	192.168.1.211	4c:0b:be:48:7d:73
