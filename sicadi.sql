@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-04-2020 a las 03:29:28
--- Versión del servidor: 10.3.16-MariaDB
--- Versión de PHP: 7.1.30
+-- Tiempo de generación: 14-07-2022 a las 16:50:30
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -71,8 +70,8 @@ CREATE TABLE `citas_presupuestos` (
 
 INSERT INTO `citas_presupuestos` (`id`, `id_user`, `id_galeria`, `id_status_cita`, `colonia`, `calle`, `numero`, `referencia`, `descripcion`, `detalle_pedido`, `fecha`, `hora`, `status`) VALUES
 (1, 84, 7, 1, 'Carrizal', 'Carrillo Puerto', '32', 'Frente a motel', 'Herreria para una casa de dos plantas', '', '2018-08-04', '10:00:00', 'pendiente'),
-(2, 84, 1, 1, 'Tamulte', 'Mendez', '111', 'Frente a motel', 'HerrerÃ­a artÃ­stica', '', '2019-08-04', '10:00:00', 'pendiente'),
-(3, 84, 1, 1, 'Carrizal', 'Carrillopuerto', '453', 'Frente a motel', 'HerrerÃ­a artÃ­stica', '', '2019-08-04', '10:00:00', 'pendiente'),
+(2, 84, 1, 2, 'Tamulte', 'Mendez', '111', 'Frente a motel', 'HerrerÃ­a artÃ­stica', '', '2019-08-04', '10:00:00', 'pendiente'),
+(3, 84, 1, 2, 'Carrizal', 'Carrillopuerto', '453', 'Frente a motel', 'HerrerÃ­a artÃ­stica', '', '2019-08-04', '10:00:00', 'pendiente'),
 (4, 84, 1, 1, 'Atasta', 'Carlos Green', '123', 'Frente a motel', 'HerrerÃ­a artÃ­stica', '', '2019-08-04', '10:00:00', 'pendiente'),
 (5, 84, 1, 1, 'Casa Blanca', 'Reforma', '234', 'Frente a motel', 'HerrerÃ­a artÃ­stica', '', '2019-08-04', '10:00:00', 'pendiente'),
 (6, 84, 1, 1, 'Espejo II', 'Macuili', '82', 'Frente a motel', 'HerrerÃ­a artÃ­stica', '', '2019-08-04', '10:00:00', 'pendiente'),
@@ -80,7 +79,8 @@ INSERT INTO `citas_presupuestos` (`id`, `id_user`, `id_galeria`, `id_status_cita
 (8, 84, 1, 1, 'Indeco', 'Principal', '23', 'Frente a motel', 'HerrerÃ­a artÃ­stica', '', '2019-08-04', '10:00:00', 'pendiente'),
 (9, 84, 1, 1, 'Carrizal', 'Carrillopuerto', '265', 'Frente a motel', 'HerrerÃ­a artÃ­stica', '', '2019-08-04', '10:00:00', 'pendiente'),
 (10, 84, 1, 2, 'Miguel Hidalgo', 'Bonanzas', '12', 'Frente a motel', 'asdf', '', '2019-08-05', '12:00:00', 'pendiente'),
-(11, 84, 2, 1, 'Gaviotas Norte', 'Brasil', '125', 'Frente a motel', 'aswdasdasd', '', '2019-08-04', '14:00:00', 'pendiente');
+(11, 84, 2, 1, 'Gaviotas Norte', 'Brasil', '125', 'Frente a motel', 'aswdasdasd', '', '2019-08-04', '14:00:00', 'pendiente'),
+(32, 90, 1, 1, 'Colonia Carrizal', 'Comando Submario', '10', 'foafk', 'onekfnak\r\n', '', '2022-06-29', '10:00:00', 'pendiente');
 
 -- --------------------------------------------------------
 
@@ -268,7 +268,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `citas_presupuestos`
 --
 ALTER TABLE `citas_presupuestos`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_presupuesto`
