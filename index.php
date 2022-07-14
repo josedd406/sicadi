@@ -10,6 +10,9 @@ if (isset($_SESSION['user_id'])) {
   $records = $conn->prepare('SELECT id, email, password, privilegios FROM users WHERE id = :id');
   $records->bindParam(':id', $_SESSION['user_id']);
   $records->execute();
+
+
+
   $results = $records->fetch(PDO::FETCH_ASSOC);
 
   $user = null;
@@ -32,9 +35,10 @@ if (isset($_SESSION['user_id'])) {
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" media="only screen and (max-width: 768px)" href="estilos.css">
+  <script src="https://kit.fontawesome.com/7b6c91b891.js" crossorigin="anonymous"></script>
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+  <script defer src="nav.js"></script>
   <meta name="viewport" content="width=device-width, user-sacalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale-1.0">
 </head>
 <body>
@@ -49,6 +53,10 @@ if (isset($_SESSION['user_id'])) {
         </div>
       </div>
       <nav>
+        <h2 id="nav-options">Opciones</h2>
+        <button class="nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+        </button>
         <ul class="sf-menu" id="nav">
           <li class="selected"><a href="index.php">Inicio</a></li>
           <li><a href="informacion/informacion.php">Quienes somos</a></li>
@@ -80,6 +88,7 @@ if (isset($_SESSION['user_id'])) {
         </ul>
       </nav>
     </header>
+    
     <div id="site_content">
       <ul id="images">
         <li><img src="images/1.jpg" width="600" height="300" alt="seascape_one" /></li>
